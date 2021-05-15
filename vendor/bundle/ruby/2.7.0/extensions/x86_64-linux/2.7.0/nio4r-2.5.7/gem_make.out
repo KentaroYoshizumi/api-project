@@ -1,0 +1,157 @@
+current directory: /home/ubuntu/api-project/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+/usr/local/rbenv/versions/2.7.0/bin/ruby -I /usr/local/rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20210515-1419-18fw2gl.rb extconf.rb
+checking for unistd.h... yes
+checking for linux/aio_abi.h... yes
+checking for linux/io_uring.h... no
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/ubuntu/api-project/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/api-project/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+make "DESTDIR="
+compiling bytebuffer.c
+compiling monitor.c
+monitor.c:185:40: warning: implicit conversion loses integer precision: 'VALUE' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    NIO_Monitor_update_interests(self, interest);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ^~~~~~~~
+monitor.c:196:40: warning: implicit conversion loses integer precision: 'VALUE' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    NIO_Monitor_update_interests(self, interest);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ^~~~~~~~
+2 warnings generated.
+compiling nio4r_ext.c
+In file included from nio4r_ext.c:6:
+./../libev/ev.c:573:48: warning: '/*' within block comment [-Wcomment]
+/*#define MIN_INTERVAL  0.00000095367431640625 /* 1/2**20, good till 2200 */
+                                               ^
+./../libev/ev.c:1192:26: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+  return ecb_popcount32 (x) + ecb_popcount32 (x >> 32);
+         ~~~~~~~~~~~~~~~~^~
+./../libev/ev.c:1054:49: note: expanded from macro 'ecb_popcount32'
+  #define ecb_popcount32(x) __builtin_popcount (x)
+                            ~~~~~~~~~~~~~~~~~~  ^
+./../libev/ev.c:1335:108: warning: implicit conversion loses integer precision: 'uint_fast32_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+ecb_inline uint_fast32_t ecb_be_u32_to_host (uint_fast32_t v) { return ecb_little_endian () ? ecb_bswap32 (v) : v; }
+                                                                                              ~~~~~~~~~~~~~^~
+./../libev/ev.c:1257:46: note: expanded from macro 'ecb_bswap32'
+  #define ecb_bswap32(x)  __builtin_bswap32 (x)
+                          ~~~~~~~~~~~~~~~~~  ^
+./../libev/ev.c:1339:108: warning: implicit conversion loses integer precision: 'uint_fast32_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+ecb_inline uint_fast32_t ecb_le_u32_to_host (uint_fast32_t v) { return ecb_big_endian    () ? ecb_bswap32 (v) : v; }
+                                                                                              ~~~~~~~~~~~~~^~
+./../libev/ev.c:1257:46: note: expanded from macro 'ecb_bswap32'
+  #define ecb_bswap32(x)  __builtin_bswap32 (x)
+                          ~~~~~~~~~~~~~~~~~  ^
+./../libev/ev.c:1355:108: warning: implicit conversion loses integer precision: 'uint_fast32_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+ecb_inline uint_fast32_t ecb_host_to_be_u32 (uint_fast32_t v) { return ecb_little_endian () ? ecb_bswap32 (v) : v; }
+                                                                                              ~~~~~~~~~~~~~^~
+./../libev/ev.c:1257:46: note: expanded from macro 'ecb_bswap32'
+  #define ecb_bswap32(x)  __builtin_bswap32 (x)
+                          ~~~~~~~~~~~~~~~~~  ^
+./../libev/ev.c:1359:108: warning: implicit conversion loses integer precision: 'uint_fast32_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+ecb_inline uint_fast32_t ecb_host_to_le_u32 (uint_fast32_t v) { return ecb_big_endian    () ? ecb_bswap32 (v) : v; }
+                                                                                              ~~~~~~~~~~~~~^~
+./../libev/ev.c:1257:46: note: expanded from macro 'ecb_bswap32'
+  #define ecb_bswap32(x)  __builtin_bswap32 (x)
+                          ~~~~~~~~~~~~~~~~~  ^
+./../libev/ev.c:1367:87: warning: implicit conversion loses integer precision: 'uint_fast32_t' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+ecb_inline void ecb_poke_be_u32_u (void *ptr, uint_fast32_t v) { ecb_poke_u32_u (ptr, ecb_host_to_be_u32 (v)); }
+                                                                 ~~~~~~~~~~~~~~       ^~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:1371:87: warning: implicit conversion loses integer precision: 'uint_fast32_t' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+ecb_inline void ecb_poke_le_u32_u (void *ptr, uint_fast32_t v) { ecb_poke_u32_u (ptr, ecb_host_to_le_u32 (v)); }
+                                                                 ~~~~~~~~~~~~~~       ^~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:1510:13: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+      if (e < (14 - 24)) /* might not be sharp, but is good enough */
+          ~ ^  ~~~~~~~
+./../libev/ev.c:2136:31: warning: 'extern' variable has an initializer [-Wextern-initializer]
+  EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+                              ^
+./../libev/ev.c:2249:19: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+  if (elem * ncur > MALLOC_ROUND - sizeof (void *) * 4)
+      ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:2619:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      k = minpos - heap;
+        ~ ~~~~~~~^~~~~~
+./../libev/ev.c:3029:29: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  struct itimerspec its = { 0 };
+                            ^
+                            {}
+In file included from nio4r_ext.c:6:
+In file included from ./../libev/ev.c:3086:
+./../libev/ev_linuxaio.c:125:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall2 (SYS_io_setup, nr_events, ctx_idp);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:1826:57: note: expanded from macro 'ev_syscall2'
+  #define ev_syscall2(nr,arg1,arg2)                     syscall (nr, arg1, arg2)
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from nio4r_ext.c:6:
+In file included from ./../libev/ev.c:3086:
+./../libev/ev_linuxaio.c:132:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall1 (SYS_io_destroy, ctx_id);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:1825:57: note: expanded from macro 'ev_syscall1'
+  #define ev_syscall1(nr,arg1)                          syscall (nr, arg1)
+                                                        ^~~~~~~~~~~~~~~~~~
+In file included from nio4r_ext.c:6:
+In file included from ./../libev/ev.c:3086:
+./../libev/ev_linuxaio.c:139:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall3 (SYS_io_submit, ctx_id, nr, cbp);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:1827:57: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)                syscall (nr, arg1, arg2, arg3)
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from nio4r_ext.c:6:
+In file included from ./../libev/ev.c:3086:
+./../libev/ev_linuxaio.c:146:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall3 (SYS_io_cancel, ctx_id, cbp, result);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:1827:57: note: expanded from macro 'ev_syscall3'
+  #define ev_syscall3(nr,arg1,arg2,arg3)                syscall (nr, arg1, arg2, arg3)
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from nio4r_ext.c:6:
+In file included from ./../libev/ev.c:3086:
+./../libev/ev_linuxaio.c:153:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ev_syscall5 (SYS_io_getevents, ctx_id, min_nr, nr, events, timeout);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../libev/ev.c:1829:57: note: expanded from macro 'ev_syscall5'
+  #define ev_syscall5(nr,arg1,arg2,arg3,arg4,arg5)      syscall (nr, arg1, arg2, arg3, arg4, arg5)
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from nio4r_ext.c:6:
+In file included from ./../libev/ev.c:3086:
+./../libev/ev_linuxaio.c:310:26: warning: implicit conversion loses integer precision: '__s64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+      int res      = ev->res;
+          ~~~        ~~~~^~~
+./../libev/ev_linuxaio.c:483:9: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+        else if (errno == EAGAIN)
+        ^
+In file included from nio4r_ext.c:6:
+./../libev/ev.c:4417:34: warning: '&' within '|' [-Wbitwise-op-parentheses]
+  fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+                       ~~~~~~~~~~^~~~~~~~~~~~~ ~
+./../libev/ev.c:4417:34: note: place parentheses around the '&' expression to silence this warning
+  fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+                                 ^
+                       (                      )
+./../libev/ev.c:4925:13: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+  int len = read (fs_fd, buf, sizeof (buf));
+      ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+22 warnings generated.
+compiling selector.c
+selector.c:301:26: warning: incompatible function pointer types passing 'VALUE (*)(VALUE *)' (aka 'unsigned long (*)(unsigned long *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
+        return rb_ensure(func, (VALUE)args, NIO_Selector_unlock, self);
+                         ^~~~
+/usr/local/rbenv/versions/2.7.0/include/ruby-2.7.0/ruby/ruby.h:1990:24: note: passing argument to parameter here
+VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+                       ^
+1 warning generated.
+linking shared-object nio4r_ext.so
+
+current directory: /home/ubuntu/api-project/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20210515-1419-oqiod5
